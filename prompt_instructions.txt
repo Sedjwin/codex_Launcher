@@ -1,0 +1,8 @@
+below are prompts that are designed to avoid useless token loops that exisiting codex has done
+
+
+  Environment reminder for Codex:
+  - Shell is PowerShell. Run commands through `bash -lc "..."` or use `python3 ...`.
+  - Python 3.12 is installed and on PATH. Assume other tools are missing; ask me to install anything else you need.
+  - Before rewriting large files, confirm the scope with me. If something fails or a tool is missing, pause and check
+  instead of dumping whole files.
