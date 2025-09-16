@@ -103,6 +103,13 @@ function Launch-Codex {
   & $CodexPath @launchArgs
 }
 
+# Fast path: skip menu and launch with saved settings if --go was passed
+if ($PassThruArgs -and ($PassThruArgs -contains '--go')) {
+  $PassThruArgs = $PassThruArgs | Where-Object { $_ -ne '--go' }
+  Launch-Codex
+  return
+}
+
 # Main loop
 [Console]::TreatControlCAsInput = $true
 Draw
